@@ -62,9 +62,11 @@ The NewPizza property is used to add a new pizza to the _service object.
 The RedirectToAction method is used to redirect the user to the Get page handler, which will re-render the page with the updated list of pizzas.
 */
 
-
-
-
+        public IActionResult OnPostDelete(int id)
+        {
+            _service.DeletePizza(id);
+            return RedirectToAction("Get");
+        }
 
 
     }
