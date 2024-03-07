@@ -12,7 +12,7 @@ namespace ContosoPizza.Services
             _context = context;
         }
         
-        public IList<Pizza> GetPizzas()
+        public IList<Pizza> GetPizzas() //returns a List of types Pizza
         {
             if(_context.Pizzas != null)
             {
@@ -21,7 +21,7 @@ namespace ContosoPizza.Services
             return new List<Pizza>();
         }
 
-        public void AddPizza(Pizza pizza)
+        public void AddPizza(Pizza pizza) //adds a Type of Pizza
         {
             if (_context.Pizzas != null)
             {
@@ -30,7 +30,7 @@ namespace ContosoPizza.Services
             }
         }
 
-        public void DeletePizza(int id)
+        public void DeletePizza(int id) //deletes a Type of Pizza
         {
             if (_context.Pizzas != null)
             {
